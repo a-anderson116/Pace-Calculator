@@ -11,13 +11,13 @@ struct Miles: View {
     @State private var DistanceMTextField = ""
     @State private var TotalTimeMinTextField = ""
     @State private var TotalTimeSecTextField = ""
-    @State private var PacePerMilesMin = 0
-    @State private var PacePerMilesSec = 0.0
+    @State private var PacePerMin = 0
+    @State private var PacePerSec = 0.0
     @State private var Pace = "/"
     var body: some View {
         VStack{
-            CustomText2(text:"Pace Calculator:")
-            CustomText2(text:"Miles")
+            CustomText(text:"Pace Calculator:")
+            CustomText(text:"Miles")
             CustomTextField(placeholder: "Distance Ran (in miles)", variable: $DistanceMTextField)
             HStack{
                 TextField("Minutes", text: $TotalTimeMinTextField).textFieldStyle(RoundedBorderTextFieldStyle())
@@ -29,16 +29,25 @@ struct Miles: View {
                     .frame(width:100)
             }
             Button("Calculate"){
-            if let miles = Int(DistanceMTextField){
-                if let min = Int(TotalTimeMinTextField){
-                    if let sec = Int(TotalTimeSecTextField){
-                        PacePerMilesMin = min / miles
-                        PacePerMilesSec = Double(sec / miles)
+            if let miles = Double(DistanceMTextField){
+                if let min = Double(TotalTimeMinTextField){
+                    if let sec = Double(TotalTimeSecTextField){
+                       
+                        PacePerMin = Int((((min * 60) + sec) / 60) / miles)
+                        PacePerSec = (((((min * 60) + sec) / 60) / miles) - Double(PacePerMin)) * 60
                     }
                 }
             }
-        }.padding()
+            }.padding()
+            HStack{  CustomText2(text: "Your Pace was ")
+                CustomText2(text: "\(PacePerMin) :")
+                CustomText2(text: String(format: "%.2f", PacePerSec))
+                CustomText2(text: "Min/Mile ")
+            }
+            Spacer()
+            
         }
+       
     }
 }
 struct Miles_Previews: PreviewProvider {
@@ -49,7 +58,7 @@ struct Miles_Previews: PreviewProvider {
 struct CustomText2: View {
     let text: String
     var body: some View{
-        Text(text).font(Font.custom("Impact", size: 45))
+        Text(text).font(Font.custom("Comic Sans", size: 20))
     }
 }
 struct CustomTextField: View {

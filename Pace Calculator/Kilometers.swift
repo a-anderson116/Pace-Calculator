@@ -27,15 +27,15 @@ struct Kilometers: View {
                     .frame(width:100)
             }
             Button("Calculate"){
-            if let Kilometers = Double(DistanceKTextField){
-                if let min = Double(TotalTimeMinTextField){
-                    if let sec = Double(TotalTimeSecTextField){
-                       
-                        PacePerMin = Int((((min * 60) + sec) / 60) / Kilometers)
-                        PacePerSec = (((((min * 60) + sec) / 60) / Kilometers) - Double(PacePerMin)) * 60
+                if let Kilometers = Double(DistanceKTextField){
+                    if let min = Double(TotalTimeMinTextField){
+                        if let sec = Double(TotalTimeSecTextField){
+                            
+                            PacePerMin = Int((((min * 60) + sec) / 60) / Kilometers)
+                            PacePerSec = (((((min * 60) + sec) / 60) / Kilometers) - Double(PacePerMin)) * 60
+                        }
                     }
                 }
-            }
             }.padding()
             HStack{  CustomText2(text: "Your Pace was ")
                 CustomText2(text: "\(PacePerMin) :")
@@ -43,7 +43,6 @@ struct Kilometers: View {
                 CustomText2(text: "Min/Kilometer ")
             }
             Spacer()
-            
         }
     }
 }

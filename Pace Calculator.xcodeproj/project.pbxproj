@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD3D937D292D237D00D9E902 /* Kilometers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3D937C292D237D00D9E902 /* Kilometers.swift */; };
 		AD3D937F292D238700D9E902 /* Miles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3D937E292D238700D9E902 /* Miles.swift */; };
+		AD40265A2937B70900054B72 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4026592937B70900054B72 /* Conversion.swift */; };
 		AD9E1656292BD17C001BFE65 /* Pace_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E1655292BD17C001BFE65 /* Pace_CalculatorApp.swift */; };
 		AD9E1658292BD17C001BFE65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E1657292BD17C001BFE65 /* ContentView.swift */; };
 		AD9E165A292BD17D001BFE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9E1659292BD17D001BFE65 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		AD3D937C292D237D00D9E902 /* Kilometers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kilometers.swift; sourceTree = "<group>"; };
 		AD3D937E292D238700D9E902 /* Miles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Miles.swift; sourceTree = "<group>"; };
+		AD4026592937B70900054B72 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		AD9E1652292BD17C001BFE65 /* Pace Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pace Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9E1655292BD17C001BFE65 /* Pace_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pace_CalculatorApp.swift; sourceTree = "<group>"; };
 		AD9E1657292BD17C001BFE65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 		AD9E1649292BD17C001BFE65 = {
 			isa = PBXGroup;
 			children = (
+				AD4026592937B70900054B72 /* Conversion.swift */,
 				AD9E1654292BD17C001BFE65 /* Pace Calculator */,
 				AD9E1653292BD17C001BFE65 /* Products */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD3D937F292D238700D9E902 /* Miles.swift in Sources */,
+				AD40265A2937B70900054B72 /* Conversion.swift in Sources */,
 				AD9E1658292BD17C001BFE65 /* ContentView.swift in Sources */,
 				AD9E1656292BD17C001BFE65 /* Pace_CalculatorApp.swift in Sources */,
 				AD3D937D292D237D00D9E902 /* Kilometers.swift in Sources */,

@@ -11,12 +11,16 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack {
-                CustomText(text:"Pace Calculator").bold()
+                CustomText(text:"Pace Calculator")
+                CustomText(text: "and")
+                CustomText(text: "Conversion Tool")
                 Spacer()
-                Image("RunnerPic").resizable().frame(width: 500, height: 400)
-                NavigationLink("Miles", destination: Miles()).font(.system(size:34)).fontWeight(.heavy).padding()
-                Text("OR").font(.system(size:25)).fontWeight(.heavy).padding()
-                NavigationLink("Kilometers" , destination: Kilometers()).font(.system(size:34)).fontWeight(.heavy).padding()
+                Image("RunnerPic").resizable().frame(width: 400, height: 300)
+                NavigationLink("Miles", destination: Miles()).font(.system(size:30)).fontWeight(.heavy).padding()
+                Text("OR").font(.system(size:20)).fontWeight(.heavy).padding()
+                NavigationLink("Kilometers" , destination: Kilometers()).font(.system(size:30)).fontWeight(.heavy).padding()
+                Text("OR").font(.system(size:20)).fontWeight(.heavy).padding()
+                NavigationLink("Conversion" , destination: Conversion()).font(.system(size:30)).fontWeight(.heavy).padding()
             }
             .padding()
         }
@@ -31,6 +35,6 @@ struct ContentView_Previews: PreviewProvider {
 struct CustomText: View {
     let text: String
     var body: some View{
-        Text(text).font(Font.custom("Impact", size: 45))
+        Text(text).font(Font.custom("Impact", size: 35))
     }
 }

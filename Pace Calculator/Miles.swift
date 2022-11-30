@@ -45,9 +45,7 @@ struct Miles: View {
                 CustomText2(text: "Min/Mile ")
             }
             Spacer()
-            
         }
-       
     }
 }
 struct Miles_Previews: PreviewProvider {

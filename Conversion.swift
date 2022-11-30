@@ -34,7 +34,7 @@ struct Conversion: View {
                 CustomText2(text: String(format: "%.2f", KilosTextField01))
                 CustomText2(text: "Kilometers")
             }
-            Button("Calculate Kilometers -> Miles"){
+            Button("Calculate Miles -> Kilometers"){
                 if let M = Double(MilesTextField02)
             {
 

@@ -20,7 +20,7 @@ struct ContentView: View {
                 Text("OR").font(.system(size:20)).fontWeight(.heavy).padding()
                 NavigationLink("Kilometers" , destination: Kilometers()).font(.system(size:30)).fontWeight(.heavy).padding()
                 Text("OR").font(.system(size:20)).fontWeight(.heavy).padding()
-                NavigationLink("Conversion" , destination: Conversion()).font(.system(size:30)).fontWeight(.heavy).padding()
+                NavigationLink("Conversion Tool" , destination: Conversion()).font(.system(size:30)).fontWeight(.heavy).padding()
             }
             .padding()
         }

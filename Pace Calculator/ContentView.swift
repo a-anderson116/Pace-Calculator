@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
     var body: some View {
         NavigationView{
@@ -15,7 +14,7 @@ struct ContentView: View {
                 CustomText(text: "and")
                 CustomText(text: "Conversion Tool")
                 Spacer()
-                Image("RunnerPic").resizable().frame(width: 400, height: 300)
+                Image("RunnerPic").resizable().frame(width: 450, height: 300)
                 NavigationLink("Miles", destination: Miles()).font(.system(size:30)).fontWeight(.heavy).padding()
                 Text("OR").font(.system(size:20)).fontWeight(.heavy).padding()
                 NavigationLink("Kilometers" , destination: Kilometers()).font(.system(size:30)).fontWeight(.heavy).padding()

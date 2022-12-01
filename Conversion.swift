@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct Conversion: View {
     @State private var MilesTextField01 = 0.0
     @State private var MilesTextField02 = ""
@@ -23,10 +22,10 @@ struct Conversion: View {
             }
             Button("Calculate Kilometers -> Miles"){
                 if let K = Double(KilosTextField02)
-            {
-
-                    MilesTextField01 = 0.62 * K
-            }
+                {
+                    
+                    MilesTextField01 = K * 0.62
+                }
             }.padding()
             CustomTextField(placeholder: "Distance Ran (in Miles)", variable: $MilesTextField02)
             Text("To").padding()
@@ -36,12 +35,12 @@ struct Conversion: View {
             }
             Button("Calculate Miles -> Kilometers"){
                 if let M = Double(MilesTextField02)
-            {
-
+                {
+                    
                     KilosTextField01 = M / 0.62
-            }
+                }
             }.padding()
-Spacer()
+            Spacer()
         }
         
     }

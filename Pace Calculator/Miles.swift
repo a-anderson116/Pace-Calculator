@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct Miles: View {
     @State private var DistanceMTextField = ""
     @State private var TotalTimeMinTextField = ""
@@ -29,15 +28,15 @@ struct Miles: View {
                     .frame(width:100)
             }
             Button("Calculate"){
-            if let miles = Double(DistanceMTextField){
-                if let min = Double(TotalTimeMinTextField){
-                    if let sec = Double(TotalTimeSecTextField){
-                       
-                        PacePerMin = Int((((min * 60) + sec) / 60) / miles)
-                        PacePerSec = (((((min * 60) + sec) / 60) / miles) - Double(PacePerMin)) * 60
+                if let miles = Double(DistanceMTextField){
+                    if let min = Double(TotalTimeMinTextField){
+                        if let sec = Double(TotalTimeSecTextField){
+                            
+                            PacePerMin = Int((((min * 60) + sec) / 60) / miles)
+                            PacePerSec = (((((min * 60) + sec) / 60) / miles) - Double(PacePerMin)) * 60
+                        }
                     }
                 }
-            }
             }.padding()
             HStack{  CustomText2(text: "Your Pace was ")
                 CustomText2(text: "\(PacePerMin) :")

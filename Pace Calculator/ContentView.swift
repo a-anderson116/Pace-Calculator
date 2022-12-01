@@ -37,3 +37,4 @@ struct CustomText: View {
         Text(text).font(Font.custom("Impact", size: 35))
     }
 }
+

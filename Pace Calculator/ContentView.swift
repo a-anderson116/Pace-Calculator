@@ -9,19 +9,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView{
-            VStack {
-                CustomText(text:"Pace Calculator")
-                CustomText(text: "and")
-                CustomText(text: "Conversion Tool")
-                Spacer()
-                Image("RunnerPic").resizable().frame(width: 450, height: 300)
-                NavigationLink("Miles", destination: Miles()).font(.system(size:30)).fontWeight(.heavy).padding()
-                Text("OR").font(.system(size:20)).fontWeight(.heavy).padding()
-                NavigationLink("Kilometers" , destination: Kilometers()).font(.system(size:30)).fontWeight(.heavy).padding()
-                Text("OR").font(.system(size:20)).fontWeight(.heavy).padding()
-                NavigationLink("Conversion Tool" , destination: Conversion()).font(.system(size:30)).fontWeight(.heavy).padding()
+            ZStack{
+                Color.white.opacity(0.9).ignoresSafeArea()
+                Color.orange.opacity(0.1).ignoresSafeArea()
+                VStack {
+                    CustomText(text:"Pace Calculator")
+                    CustomText(text: "and")
+                    CustomText(text: "Conversion Tool")
+                    Image("RunnerPic").resizable().frame(width: 450, height: 300)
+                    Spacer()
+                    NavigationLink("Pace per Mile", destination: Miles()).font(.system(size:20)).fontWeight(.heavy).padding()
+                    Text("____________________")
+                    NavigationLink("Pace per Kilometer" , destination: Kilometers()).font(.system(size:20)).fontWeight(.heavy).padding()
+                    Text("____________________")
+                    NavigationLink("Conversion Tool" , destination: Conversion()).font(.system(size:20)).fontWeight(.heavy).padding()
+                    
+                }
             }
-            .padding()
         }
     }
 }

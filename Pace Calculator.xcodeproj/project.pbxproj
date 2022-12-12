@@ -41,7 +41,6 @@
 		AD9E1649292BD17C001BFE65 = {
 			isa = PBXGroup;
 			children = (
-				AD4026592937B70900054B72 /* Conversion.swift */,
 				AD9E1654292BD17C001BFE65 /* Pace Calculator */,
 				AD9E1653292BD17C001BFE65 /* Products */,
 			);
@@ -62,6 +61,7 @@
 				AD9E1657292BD17C001BFE65 /* ContentView.swift */,
 				AD3D937C292D237D00D9E902 /* Kilometers.swift */,
 				AD3D937E292D238700D9E902 /* Miles.swift */,
+				AD4026592937B70900054B72 /* Conversion.swift */,
 				AD9E1659292BD17D001BFE65 /* Assets.xcassets */,
 				AD9E165B292BD17D001BFE65 /* Preview Content */,
 			);

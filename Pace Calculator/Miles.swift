@@ -13,6 +13,7 @@ struct Miles: View {
     @State private var PacePerMin = 0
     @State private var PacePerSec = 0.0
     @State private var Pace = "/"
+    let name : String
     var body: some View {
         ZStack{
             Color.green.opacity(0.9).ignoresSafeArea()
@@ -41,7 +42,7 @@ struct Miles: View {
                         }
                     }
                 }.buttonStyle(CustomButtonStyle()).padding()
-                HStack{  CustomText2(text: "Your Pace was ")
+                HStack{  CustomText2(text: "\(name)'s Pace was ")
                     CustomText2(text: "\(PacePerMin) :")
                     CustomText2(text: String(format: "%.2f", PacePerSec))
                     CustomText2(text: "Min/Mile ")
@@ -53,7 +54,7 @@ struct Miles: View {
 }
 struct Miles_Previews: PreviewProvider {
     static var previews: some View {
-        Miles()
+        Miles(name: "")
     }
 }
 struct CustomText2: View {

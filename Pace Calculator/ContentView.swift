@@ -7,6 +7,8 @@
 
 import SwiftUI
 struct ContentView: View {
+    @State private var nameTextFieldView = ""
+    @State private var name = ""
     var body: some View {
         NavigationView{
             ZStack{
@@ -18,12 +20,16 @@ struct ContentView: View {
                     CustomText(text: "Conversion Tool")
                     Image("RunnerPic").resizable().frame(width: 450, height: 300)
                     Spacer()
-                    NavigationLink("Pace per Mile", destination: Miles()).font(.system(size:20)).fontWeight(.heavy).padding()
-                    Text("____________________")
-                    NavigationLink("Pace per Kilometer" , destination: Kilometers()).font(.system(size:20)).fontWeight(.heavy).padding()
-                    Text("____________________")
-                    NavigationLink("Conversion Tool" , destination: Conversion()).font(.system(size:20)).fontWeight(.heavy).padding()
-                    
+                    TextField("What's Your Name", text: $nameTextFieldView).textFieldStyle(RoundedBorderTextFieldStyle())
+                        .multilineTextAlignment(.center)
+                        .frame(width:200)
+                    VStack{
+                        NavigationLink("Pace per Mile", destination: Miles(name: nameTextFieldView)).font(.system(size:20)).fontWeight(.heavy).padding()
+                        Text("____________________")
+                        NavigationLink("Pace per Kilometer" , destination: Kilometers(name: nameTextFieldView)).font(.system(size:20)).fontWeight(.heavy).padding()
+                        Text("____________________")
+                        NavigationLink("Conversion Tool" , destination: Conversion()).font(.system(size:20)).fontWeight(.heavy).padding()
+                    }
                 }
             }
         }

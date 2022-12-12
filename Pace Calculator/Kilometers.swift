@@ -12,6 +12,7 @@ struct Kilometers: View {
     @State private var TotalTimeSecTextField = ""
     @State private var PacePerMin = 0
     @State private var PacePerSec = 0.0
+    let name: String
     var body: some View {
         ZStack{
             Color.green.opacity(0.9).ignoresSafeArea()
@@ -40,7 +41,7 @@ struct Kilometers: View {
                         }
                     }
                 }.buttonStyle(CustomButtonStyle()).padding()
-                HStack{  CustomText2(text: "Your Pace was ")
+                HStack{  CustomText2(text: "\(name)'s Pace was ")
                     CustomText2(text: "\(PacePerMin) :")
                     CustomText2(text: String(format: "%.2f", PacePerSec))
                     CustomText2(text: "Min/Kilometer ")
@@ -52,6 +53,6 @@ struct Kilometers: View {
 }
 struct Kilometers_Previews: PreviewProvider {
     static var previews: some View {
-        Kilometers()
+        Kilometers(name : "")
     }
 }

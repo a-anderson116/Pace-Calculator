@@ -3,6 +3,7 @@
 //  Pace Calculator
 //
 //  Created by Alex Anderson on 11/21/22.
+//  Finished by Alex Anderson on 12/15/22
 //
 
 import SwiftUI

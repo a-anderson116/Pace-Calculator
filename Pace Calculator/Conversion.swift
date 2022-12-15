@@ -30,7 +30,6 @@ struct Conversion: View {
                         MilesTextField01 = K * 0.62
                     }
                 }.buttonStyle(CustomButtonStyle()).padding()
-                
                 VStack{
                     CustomTextField(placeholder: "Distance Ran (in Miles)", variable: $MilesTextField02)
                     Text("To").padding()
@@ -41,7 +40,6 @@ struct Conversion: View {
                     Button("Calculate Miles -> Kilometers"){
                         if let M = Double(MilesTextField02)
                         {
-                            
                             KilosTextField01 = M / 0.62
                         }
                     }.buttonStyle(CustomButtonStyle()).padding()
